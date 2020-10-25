@@ -11,7 +11,7 @@ module.exports.home = function(req, res)
         }
         return res.render('index', 
         {
-            title: "TODO List",
+            title: "TODO App",
             task_list: list
         });
     });
