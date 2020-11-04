@@ -29,7 +29,8 @@ li
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-ul {
+ul 
+{
     display: block;
     list-style-type: none;
     margin-top: 1em;
@@ -37,9 +38,22 @@ ul {
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
-  }
+}
 
-  #descriptionField
-  {
-      width: 25.1vw;
-  }
+#descriptionField
+{
+    width: 25.1vw;
+}
+
+#add-btn
+{
+    position: absolute;
+    left: 43vw;
+}
+
+#delete-btn
+{
+    position: absolute;
+    left: 51vw;
+    top: 8.22vw;
+}

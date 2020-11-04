@@ -36,31 +36,35 @@
 
             <div id="buttons">
                 <!-- Add Task Button -->
-                <button type="submit" class="btn btn-dark"><i class="fas fa-plus"></i> ADD TASK</button>
+                <button id="add-btn" type="submit" class="btn btn-dark"><i class="fas fa-plus"></i> ADD TASK</button>
                 <!-- Delete Tasks Button -->
-                <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> DELETE TASKS</button>
+                <!-- <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> DELETE TASKS</button> -->
             </div>
         </form>
-
+        <br>
         <div id="list-container">
             <ul>
                 <% task_list.reverse() %>
-                <% for(let i of task_list) { %>
-                <li>
-                    <div id="task" class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="<%= i._id %>">
-                        <label class="form-check-label" for="<%= i._id %>">
-                            <p><%= i.description %></p> 
-                            <p><i class="fas fa-calendar-alt"></i> <%= i.dueDate %></p>
-                        </label>
-                    </div>
-                    <% var colors = ['red', 'blue', 'grey', 'green', 'yellow', 'olive'] %>
-                    <% var num = Math.floor(Math.random() * colors.length) %>
-                    <div id="categoryDisplay" style="background-color: <%= colors[num] %>;">
-                        <p><%= i.category %></p>
-                    </div>
-                </li>
-                <% } %>
+                <form action="/delete" method="POST">
+                    <% for(i of task_list) { %>
+                        <li>
+                            <div id="task" class="form-check">
+                                <input class="form-check-input" type="checkbox" name="task_ids" value="<%= i._id %>" id="<%= i._id %>">
+                                <label class="form-check-label" for="<%= i._id %>">
+                                    <p><%= i.description %></p> 
+                                    <p><i class="fas fa-calendar-alt"></i> <%= i.dueDate %></p>
+                                </label>
+                            </div>
+                            <% var colors = ['red', 'blue', 'grey', 'green', 'yellow', 'olive'] %>
+                            <% var num = Math.floor(Math.random() * colors.length) %>
+                            <div id="categoryDisplay" style="background-color: <%= colors[num] %>;">
+                                <p><%= i.category %></p>
+                            </div>
+                        </li>
+                    <% } %>
+                    <!-- Delete Tasks Button -->
+                    <button id="delete-btn" type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i> DELETE TASKS</button>
+                </form>
             </ul>
         </div>
 

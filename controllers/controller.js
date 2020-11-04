@@ -31,3 +31,24 @@ module.exports.addTask = function(req, res)
         return res.redirect('back');
     })
 }
+
+module.exports.deleteTask = function(req, res)
+{
+    var tasks = req.body.task_ids;
+    if(typeof(tasks) == 'string')
+    {
+        List.findByIdAndRemove(tasks, function(err)
+        {
+            console.log('Deleted a task');
+        });
+    }
+    else
+    {
+        for(taskid of tasks)
+        {
+            List.findByIdAndRemove(taskid, function(err){});
+        }
+        console.log(`Deleted ${tasks.length} tasks`);
+    }
+    return res.redirect('back');
+}
