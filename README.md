@@ -1,6 +1,6 @@
 # TODO-List-App (Under Development)
 <p align="center">
-  <img width="460" height="550" src="https://user-images.githubusercontent.com/31281299/98250302-47364e80-1f9d-11eb-961d-02f99e6b5ea8.jpg">
+  <img width="460" height="550" src="https://user-images.githubusercontent.com/31281299/98286171-97c3a100-1fc9-11eb-8092-0c82b0c6549d.jpg">
 </p>
 
 ## Technologies

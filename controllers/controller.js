@@ -43,6 +43,7 @@ module.exports.deleteTask = function(req, res)
         List.findByIdAndRemove(tasks, function(err)
         {
             console.log('Deleted a task');
+            return res.redirect('back');
         });
     }
     else
@@ -53,6 +54,6 @@ module.exports.deleteTask = function(req, res)
         }
         // To print in console that how many tasks have been deleted by use
         console.log(`Deleted ${tasks.length} tasks`);
+        return res.redirect('back');
     }
-    return res.redirect('back');
 }
