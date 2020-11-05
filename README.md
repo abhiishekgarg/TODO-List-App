@@ -1,4 +1,7 @@
 # TODO-List-App (Under Development)
+<p align="center">
+  <img width="460" height="550" src="https://user-images.githubusercontent.com/31281299/98250302-47364e80-1f9d-11eb-961d-02f99e6b5ea8.jpg">
+</p>
 
 ## Technologies
 TODO-List-App uses a number of open source projects to work properly:

@@ -3,20 +3,15 @@ body
     text-align: center;
 }
 
-#list-container
+#add-btn
 {
-    margin: 0 auto;
-    text-align: left;
+    position: absolute;
+    left: 43vw;
 }
 
-li
+#descriptionField
 {
-    margin-left: 35vw;
-    width: 30%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-top: 1px solid grey;
+    width: 25.1vw;
 }
 
 #categoryDisplay
@@ -27,6 +22,12 @@ li
     padding: 0.5vw;
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#list-container
+{
+    margin: 1.3vw auto;
+    text-align: left;
 }
 
 ul 
@@ -40,15 +41,20 @@ ul
     padding-left: 0;
 }
 
-#descriptionField
+li
 {
-    width: 25.1vw;
+    margin-left: 35vw;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid grey;
 }
 
-#add-btn
+#task
 {
-    position: absolute;
-    left: 43vw;
+    margin-top: 0.5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #delete-btn

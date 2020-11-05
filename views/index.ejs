@@ -44,7 +44,6 @@
         <br>
         <div id="list-container">
             <ul>
-                <% task_list.reverse() %>
                 <form action="/delete" method="POST">
                     <% for(i of task_list) { %>
                         <li>
@@ -55,8 +54,19 @@
                                     <p><i class="fas fa-calendar-alt"></i> <%= i.dueDate %></p>
                                 </label>
                             </div>
-                            <% var colors = ['red', 'blue', 'grey', 'green', 'yellow', 'olive'] %>
-                            <% var num = Math.floor(Math.random() * colors.length) %>
+                            <% var colors = ['olive', 'green', 'gold', 'blue', 'red', 'grey'] %>
+                            <% let num %>
+                            <% if(i.category == 'Personal') { %>
+                            <%  num = 1; %>
+                            <% } else if(i.category == 'Work') { %>
+                            <%  num = 2; %>
+                            <% } else if(i.category == 'School') { %>
+                            <%  num = 3; %>
+                            <% } else if(i.category == 'Cleaning') { %>
+                            <%  num = 4; %>
+                            <% } else { %>
+                            <%  num = 5; %>
+                            <% } %>
                             <div id="categoryDisplay" style="background-color: <%= colors[num] %>;">
                                 <p><%= i.category %></p>
                             </div>
