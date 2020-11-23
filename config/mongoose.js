@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/to_do_list');
+mongoose.connect(process.env.TODOLIST_MONGOLAB_URI);
 
 const db = mongoose.connection;
 
